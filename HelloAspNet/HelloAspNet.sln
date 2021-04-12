@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloAspNet.Tests", "HelloA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstWebApp", "FirstWebApp\FirstWebApp.csproj", "{391D06CC-EBB6-4600-BABC-8D4161644BD1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationWebApp", "ValidationWebApp\ValidationWebApp.csproj", "{EE66900E-F483-4FB6-A28A-9D8060919AD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateWebApp", "TemplateWebApp\TemplateWebApp.csproj", "{99190F38-F888-4100-A3BD-802F28D6231A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{391D06CC-EBB6-4600-BABC-8D4161644BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{391D06CC-EBB6-4600-BABC-8D4161644BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{391D06CC-EBB6-4600-BABC-8D4161644BD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE66900E-F483-4FB6-A28A-9D8060919AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE66900E-F483-4FB6-A28A-9D8060919AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE66900E-F483-4FB6-A28A-9D8060919AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE66900E-F483-4FB6-A28A-9D8060919AD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99190F38-F888-4100-A3BD-802F28D6231A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99190F38-F888-4100-A3BD-802F28D6231A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99190F38-F888-4100-A3BD-802F28D6231A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99190F38-F888-4100-A3BD-802F28D6231A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -7,22 +8,23 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{391D06CC-EBB6-4600-BABC-8D4161644BD1}</ProjectGuid>
+    <ProjectGuid>{99190F38-F888-4100-A3BD-802F28D6231A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FirstWebApp</RootNamespace>
-    <AssemblyName>FirstWebApp</AssemblyName>
+    <RootNamespace>TemplateWebApp</RootNamespace>
+    <AssemblyName>TemplateWebApp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44379</IISExpressSSLPort>
+    <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.1</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,116 +69,107 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\main.css" />
-    <Content Include="FrmAppSession.aspx" />
-    <Content Include="FrmButton.aspx" />
-    <Content Include="FrmControls.aspx" />
-    <Content Include="FrmFileUpload.aspx" />
-    <Content Include="FrmPageLoad.aspx" />
-    <Content Include="FrmRequest.aspx" />
-    <Content Include="FrmResponseBuffer.aspx" />
-    <Content Include="FrmResponseWrite.aspx" />
-    <Content Include="FrmRichControl.aspx" />
-    <Content Include="FrmServer.aspx" />
-    <Content Include="FrmStandardControl.aspx" />
+    <Content Include="About.aspx" />
+    <Content Include="Catalog.ascx" />
+    <Content Include="Category.ascx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Main.css" />
+    <Content Include="Copyright.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="FrmPage.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="images\ASP-NET-Banners-01.png" />
-    <Content Include="images\ASP-NET-Banners-02.png" />
-    <Content Include="images\btn_post.gif" />
-    <Content Include="Index.aspx" />
+    <Content Include="Navigator.ascx" />
+    <Content Include="Main.Master" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAppSession.aspx.cs">
-      <DependentUpon>FrmAppSession.aspx</DependentUpon>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FrmAppSession.aspx.designer.cs">
-      <DependentUpon>FrmAppSession.aspx</DependentUpon>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FrmButton.aspx.cs">
-      <DependentUpon>FrmButton.aspx</DependentUpon>
+    <Compile Include="Catalog.ascx.cs">
+      <DependentUpon>Catalog.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FrmButton.aspx.designer.cs">
-      <DependentUpon>FrmButton.aspx</DependentUpon>
+    <Compile Include="Catalog.ascx.designer.cs">
+      <DependentUpon>Catalog.ascx</DependentUpon>
     </Compile>
-    <Compile Include="FrmControls.aspx.cs">
-      <DependentUpon>FrmControls.aspx</DependentUpon>
+    <Compile Include="Category.ascx.cs">
+      <DependentUpon>Category.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FrmControls.aspx.designer.cs">
-      <DependentUpon>FrmControls.aspx</DependentUpon>
+    <Compile Include="Category.ascx.designer.cs">
+      <DependentUpon>Category.ascx</DependentUpon>
     </Compile>
-    <Compile Include="FrmFileUpload.aspx.cs">
-      <DependentUpon>FrmFileUpload.aspx</DependentUpon>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FrmFileUpload.aspx.designer.cs">
-      <DependentUpon>FrmFileUpload.aspx</DependentUpon>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FrmPageLoad.aspx.cs">
-      <DependentUpon>FrmPageLoad.aspx</DependentUpon>
+    <Compile Include="Copyright.ascx.cs">
+      <DependentUpon>Copyright.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FrmPageLoad.aspx.designer.cs">
-      <DependentUpon>FrmPageLoad.aspx</DependentUpon>
+    <Compile Include="Copyright.ascx.designer.cs">
+      <DependentUpon>Copyright.ascx</DependentUpon>
     </Compile>
-    <Compile Include="FrmRequest.aspx.cs">
-      <DependentUpon>FrmRequest.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FrmRequest.aspx.designer.cs">
-      <DependentUpon>FrmRequest.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FrmResponseBuffer.aspx.cs">
-      <DependentUpon>FrmResponseBuffer.aspx</DependentUpon>
+    <Compile Include="FrmPage.aspx.cs">
+      <DependentUpon>FrmPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FrmResponseBuffer.aspx.designer.cs">
-      <DependentUpon>FrmResponseBuffer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrmResponseWrite.aspx.cs">
-      <DependentUpon>FrmResponseWrite.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrmResponseWrite.aspx.designer.cs">
-      <DependentUpon>FrmResponseWrite.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrmRichControl.aspx.cs">
-      <DependentUpon>FrmRichControl.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrmRichControl.aspx.designer.cs">
-      <DependentUpon>FrmRichControl.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrmServer.aspx.cs">
-      <DependentUpon>FrmServer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrmServer.aspx.designer.cs">
-      <DependentUpon>FrmServer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrmStandardControl.aspx.cs">
-      <DependentUpon>FrmStandardControl.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrmStandardControl.aspx.designer.cs">
-      <DependentUpon>FrmStandardControl.aspx</DependentUpon>
+    <Compile Include="FrmPage.aspx.designer.cs">
+      <DependentUpon>FrmPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Navigator.ascx.cs">
+      <DependentUpon>Navigator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navigator.ascx.designer.cs">
+      <DependentUpon>Navigator.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -187,14 +180,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Files\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
@@ -203,9 +199,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>3317</DevelopmentServerPort>
+          <DevelopmentServerPort>5167</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44379/</IISUrl>
+          <IISUrl>http://localhost:5167/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
