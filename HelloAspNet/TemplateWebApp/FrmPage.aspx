@@ -21,13 +21,11 @@
             <div class="row">
                 <div class="col-md-12" style="background-color: aquamarine;">
                     <nav:Navigator runat="server" ID="UcNavMain" />
-                    네비게이터
                 </div>
             </div>
             <div class="row" style="height: 200px;">
                 <div class="col-md-4" style="background-color: antiquewhite;">
                     <cat:Category runat="server" />
-                    카테고리
                 </div>
                 <div class="col-md-8" style="background-color: burlywood;">
                     <ct1:Catalog runat="server" />
@@ -36,7 +34,6 @@
             <div class="row">
                 <div class="col-md-12" style="background-color: cadetblue;">
                     <cpy:Copyright runat="server" ID="UcCopyright" />
-                    카피라이트
                 </div>
             </div>
         </div>
