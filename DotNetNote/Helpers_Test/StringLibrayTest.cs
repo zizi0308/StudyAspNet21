@@ -26,16 +26,33 @@ namespace Helpers_Test
 
             var expected = "안녕하세요....";
             var actual = StringLibray.CutString(strCut, intChar);
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual); // 값이 같아야 테스트가 성공함
 
         }
 
+        [Ignore]
         [TestMethod]
         public void AddTest()
         {
             var expected = 10;
             var actual = (5 + 5);
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void IsPhotoTest()
+        {
+            var imagepath = @"D:\Sources\Gitrepository\StudyDesktopApp\WPFApp\main.png";
+            bool result = BoardLibrary.IsPhoto(imagepath);
+            Assert.IsTrue(result, "file extension must be png, jpg, gif"); // 참이어야 테스트가 넘어감
+        }
+
+        [TestMethod]
+        public void IsNotPhotoTest()
+        {
+            var imagepath = @"D:\Sources\Gitrepository\StudyDesktopApp\WPFApp\main.pdf";
+            bool result = BoardLibrary.IsPhoto(imagepath);
+            Assert.IsFalse(result, "file extension must be png, jpg, gif"); // 거짓이어야 테스트가 넘어감
         }
     }
 }
