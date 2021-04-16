@@ -15,7 +15,7 @@ namespace DotNetNote.Board
 
         private string _Id;   // 리스트에서 넘겨주는 번호
         //private string _Mode; // 뷰에서 넘겨주는 모드값 // Edit, Reply
-        private string _BaseDir = ""; // Gitrepository\..Files
+        private string _BaseDir = ""; // GitReponsitory\StudyASPNET21\... Files
         private string _FileName = ""; // 파일명
         private int _FileSize = 0; // 파일사이즈
         protected void Page_Load(object sender, EventArgs e)
@@ -47,16 +47,6 @@ namespace DotNetNote.Board
             }
         }
 
-        private void DisplayDataForReply()
-        {
-            var repo = new DbRepository();
-            Note note = repo.GetNoteById(Convert.ToInt32(_Id));
-
-            txtTitle.Text = $"답변 : {note.Title}";
-            txtContent.Text = $"\n\n작성일 : {note.PostDate}, 작성자 : '{note.Name}'\n-----------------\n" +
-                $"{note.Content.Replace("\n", "\n>")}\n-----------------\n";
-        }
-
         private void DisplayDataForModify()
         {
             var repo = new DbRepository();
@@ -68,10 +58,21 @@ namespace DotNetNote.Board
             txtTitle.Text = note.Title;
             txtContent.Text = note.Content;
 
+            // Encoding
             string encoding = note.Encoding;
             if (encoding == "Text") rdoEncoding.SelectedIndex = 0;
             else if (encoding == "Mixed") rdoEncoding.SelectedIndex = 2;
             else rdoEncoding.SelectedIndex = 1;
+        }
+
+        private void DisplayDataForReply()
+        {
+            var repo = new DbRepository();
+            Note note = repo.GetNoteById(Convert.ToInt32(_Id));
+
+            txtTitle.Text = $"답변 : {note.Title}";
+            txtContent.Text = $"\n\n작성일 : {note.PostDate}, 작성자 : '{note.Name}'\n-----------------\n" +
+                $"{note.Content.Replace("\n", "\n>")}\n-----------------\n";
         }
 
         protected void chkUpload_CheckedChanged(object sender, EventArgs e)
@@ -87,8 +88,7 @@ namespace DotNetNote.Board
                 else if (ViewState["Mode"].ToString() == "Reply") FormType = BoardWriteFormType.Reply;
                 else FormType = BoardWriteFormType.Write;
 
-                // 파일업로드
-                UploadFile();
+                UploadFile(); // 파일업로드
 
                 Note note = new Note();
                 note.Id = Convert.ToInt32(_Id); // 없으면 0
@@ -101,7 +101,7 @@ namespace DotNetNote.Board
                 note.FileSize = _FileSize;
                 note.Password = txtPassword.Text;
                 note.PostIp = Request.UserHostAddress;
-                note.Encoding = rdoEncoding.SelectedValue;
+                note.Encoding = rdoEncoding.SelectedValue; // Text, Html, Mixed
 
                 DbRepository repo = new DbRepository();
 
@@ -113,7 +113,7 @@ namespace DotNetNote.Board
                         break;
                     case BoardWriteFormType.Modify:
                         note.ModifyIp = Request.UserHostAddress;
-                        // Todo파일처리
+                        // file 처리
                         note.FileName = ViewState["FileName"].ToString();
                         note.FileSize = Convert.ToInt32(ViewState["FileSize"]);
                         if (repo.UpdateNote(note) > 0) Response.Redirect($"BoardView.aspx?Id={_Id}");
@@ -137,7 +137,7 @@ namespace DotNetNote.Board
         }
 
         /// <summary>
-        /// 추가 : 파일업로드 쿼리
+        /// 추가 : 파일업로드 처리
         /// </summary>
         private void UploadFile()
         {
