@@ -14,20 +14,33 @@ namespace DotNetNote.Board
         private DbRepository _repo;
         // 검색모드이면 true, 보통 false
         public bool SearchMode { get; set; } = false;
-        
+        public string SearchField { get; set; }
+        public string SearchQuery { get; set; }
         public int RecordCount = 0; // 총 레코드 수
         public int PageIndex = 0; // 페이징 할 때 꼭 필요한 값, 현재 보여줄 페이지 번호
         public BoardList()
         {
             _repo = new DbRepository(); // SqlConnection생성
         }
-
+       
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            SearchMode = (!string.IsNullOrEmpty(Request["SearchField"]) && !string.IsNullOrEmpty(Request["SearchQuery"]));
+
+            if (SearchMode)
+            {
+                SearchField = Request["SearchField"];
+                SearchQuery = Request["SearchQuery"];
+            }
+
             if (!SearchMode)
             {
                 RecordCount = _repo.GetCountAll();
+            }
+            else
+            {
+                RecordCount = _repo.GetCountBySearch(SearchField, SearchQuery);
             }
             LblTotalRecord.Text = $"Total Record : {RecordCount}";
 
@@ -59,6 +72,10 @@ namespace DotNetNote.Board
             if (!SearchMode)
             {
                 GrvNates.DataSource = _repo.GetAll(PageIndex); // 페이징은 0부터 시작
+            }
+            else
+            {
+                GrvNates.DataSource = _repo.GetSeachAll(PageIndex, SearchField, SearchQuery); // 검색결과리스트
             }
 
             GrvNates.DataBind(); // 데이터 바인딩 끝
