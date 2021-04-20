@@ -48,6 +48,7 @@ namespace TodoListWebApp
 
             app.UseEndpoints(endpoints =>
             {
+                // Rest(ful)Url 주소가 폴더정리 순서대로 깔끔하게 나옴
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
