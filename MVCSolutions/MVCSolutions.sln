@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicMVCWebApp", "BasicMVCW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbWebApp", "DbWebApp\DbWebApp.csproj", "{85B54B63-B8F9-49D7-B8B7-819381E7F86D}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MvcWebLab.Database", "MvcWebLab.Database\MvcWebLab.Database.sqlproj", "{D55EC406-CDA3-4BDA-855B-A0BCFAFADF31}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoListWebApp", "TodoListWebApp\TodoListWebApp.csproj", "{12824BB6-B669-4985-8E4F-E27D40B41864}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApiTestApp", "RestApiTestApp\RestApiTestApp.csproj", "{30EA7FEA-008E-42DE-B147-0CDE3635FECE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApiTestApp", "RestApiTestApp\RestApiTestApp.csproj", "{30EA7FEA-008E-42DE-B147-0CDE3635FECE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPortpolio", "MyPortpolio\MyPortpolio.csproj", "{6DF8096E-8EE1-42DB-8AE9-2B1F7CCAB1F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyPortpolio", "MyPortpolio\MyPortpolio.csproj", "{6DF8096E-8EE1-42DB-8AE9-2B1F7CCAB1F8}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TotalDatabase", "TotalDatabase\TotalDatabase.sqlproj", "{C19F8304-DA1F-4FD9-AC44-FCE0004409CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,12 +29,6 @@ Global
 		{85B54B63-B8F9-49D7-B8B7-819381E7F86D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85B54B63-B8F9-49D7-B8B7-819381E7F86D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85B54B63-B8F9-49D7-B8B7-819381E7F86D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D55EC406-CDA3-4BDA-855B-A0BCFAFADF31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D55EC406-CDA3-4BDA-855B-A0BCFAFADF31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D55EC406-CDA3-4BDA-855B-A0BCFAFADF31}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{D55EC406-CDA3-4BDA-855B-A0BCFAFADF31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D55EC406-CDA3-4BDA-855B-A0BCFAFADF31}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D55EC406-CDA3-4BDA-855B-A0BCFAFADF31}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{12824BB6-B669-4985-8E4F-E27D40B41864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{12824BB6-B669-4985-8E4F-E27D40B41864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12824BB6-B669-4985-8E4F-E27D40B41864}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,6 +41,12 @@ Global
 		{6DF8096E-8EE1-42DB-8AE9-2B1F7CCAB1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DF8096E-8EE1-42DB-8AE9-2B1F7CCAB1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DF8096E-8EE1-42DB-8AE9-2B1F7CCAB1F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C19F8304-DA1F-4FD9-AC44-FCE0004409CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C19F8304-DA1F-4FD9-AC44-FCE0004409CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C19F8304-DA1F-4FD9-AC44-FCE0004409CE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C19F8304-DA1F-4FD9-AC44-FCE0004409CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C19F8304-DA1F-4FD9-AC44-FCE0004409CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C19F8304-DA1F-4FD9-AC44-FCE0004409CE}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
