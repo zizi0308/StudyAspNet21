@@ -2731,7 +2731,7 @@ fieldset[disabled] .btn-link.active {
 
 .has-success:after,
 .has-danger:after {
-  font-family: 'Nucleo Outline';
+  font-family: NanumGothic;
   content: "\ea22";
   display: inline-block;
   position: absolute;
@@ -3083,15 +3083,15 @@ textarea.form-control:active {
 }
 
 .form-check .form-check-sign::after {
-  font-family: 'Nucleo Outline';
-  content: "\ea22";
-  top: 0px;
-  text-align: center;
-  font-size: 14px;
-  opacity: 0;
-  color: #555555;
-  border: 0;
-  background-color: inherit;
+    font-family: 'NanumGothic';
+    content: "\ea22";
+    top: 0px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0;
+    color: #555555;
+    border: 0;
+    background-color: inherit;
 }
 
 .form-check.disabled .form-check-label,
@@ -3491,7 +3491,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    font-family: "NanumGothic";
 }
 
 h1,
@@ -3585,7 +3585,7 @@ p {
 
 .title {
   font-weight: 700;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .title.title-up {
@@ -5692,7 +5692,7 @@ img {
 
 .profile-page .title {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .profile-page .description,
