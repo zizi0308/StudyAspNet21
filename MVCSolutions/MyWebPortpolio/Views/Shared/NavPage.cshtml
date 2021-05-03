@@ -1,4 +1,4 @@
-﻿
+﻿@using Microsoft.AspNetCore.Http
 @{
     ViewData["Title"] = "NavPage";
 }
@@ -12,22 +12,6 @@
                 <span class="navbar-toggler-bar bottom-bar"></span>
             </button>
         </div>
-        @*<div class="dropdown button-dropdown">
-            <a href="#pablo" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
-                <span class="button-bar"></span>
-                <span class="button-bar"></span>
-                <span class="button-bar"></span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-header">Dropdown header</a>
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">One more separated link</a>
-            </div>*@
     </div>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-0">
@@ -42,12 +26,17 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">
+                <a class="nav-link" asp-area="" asp-controller="Contact" asp-action="Index">
                     <i class="material-icons">phone</i>Contact
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Login">
+                <a class="nav-link" asp-area="" asp-controller="Board" asp-action="Index">
+                    <i class="material-icons">dashboard_customized</i>Board
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">
                     <i class="material-icons">lock_open</i>Login
                 </a>
             </li>
@@ -56,25 +45,6 @@
                     <i class="material-icons">face</i>My GitHub
                 </a>
             </li>
-
-            @*<li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
-                <i class="fab fa-twitter"></i>
-                <p class="d-lg-none d-xl-none">Twitter</p>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
-                <i class="fab fa-facebook-square"></i>
-                <p class="d-lg-none d-xl-none">Facebook</p>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
-                <i class="fab fa-instagram"></i>
-                <p class="d-lg-none d-xl-none">Instagram</p>
-            </a>
-        </li>*@
         </ul>
     </div>
 </nav>

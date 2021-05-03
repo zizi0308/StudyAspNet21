@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MyWebPortpolio.Data;
 using MyWebPortpolio.Models;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,13 @@ namespace MyWebPortpolio.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly MyWebPortpolioContext _context;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, MyWebPortpolioContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
