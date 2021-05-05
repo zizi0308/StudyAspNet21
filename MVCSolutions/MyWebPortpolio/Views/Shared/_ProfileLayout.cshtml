@@ -1,22 +1,23 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="en">
 @{
     ViewData["Title"] = "_ProfileLayout";
 }
 
-<!DOCTYPE html>
-<html lang="en">
 @Html.Partial("HeadPage.cshtml")
+@Html.Partial("NavPage.cshtml")
 <body class="profile-page sidebar-collapse">
-    @Html.Partial("NavPage.cshtml")
-    <div class="wrapper" style="height: 400px">
-        <div class="page-header clear-filter page-header-small" filter-color="orange">
-            <div class="page-header-image" data-parallax="true" style="background-image:url('../assets/img/bg5.jpg');">
+
+    <div class="wrapper" style="height: 100px">
+        <div class="page-header clear-filter page-header-small" style="height:100px">
+            <div class="page-header-image" style="background-color: #037F8C;">
             </div>
         </div>
+        <div class="row">
+            @RenderBody()
+        </div>
     </div>
-    <div>
-        @RenderBody()
-    </div>
+
 </body>
 </html>
 

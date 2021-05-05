@@ -1,12 +1,14 @@
-﻿@Html.Partial("HeadPage.cshtml")
+﻿<!DOCTYPE html>
+<html lang="en">
 @{
     ViewData["Title"] = "_LoginLayout";
 }
-<html lang="en">
+@Html.Partial("HeadPage.cshtml")
+
 <body class="login-page sidebar-collapse">
     @Html.Partial("NavPage.cshtml")
-    <div class="page-header clear-filter" filter-color="orange">
-        <div class="page-header-image" style="background-image:url(../assets/img/login.jpg)"></div>
+    <div class="page-header clear-filter" filter-color="#F2E7C4">
+        <div class="page-header-image" style="background-color: #037F8C"></div>
         <div class="content">
             <div class="container">
                 <div class="col">
@@ -16,6 +18,7 @@
         </div>
     </div>
     @Html.Partial("FooterPage.cshtml")
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 
 </html>

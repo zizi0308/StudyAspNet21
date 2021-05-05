@@ -5682,8 +5682,8 @@ img {
 }
 
 .profile-page .photo-container {
-  width: 123px;
-  height: 123px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;

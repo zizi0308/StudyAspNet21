@@ -6,6 +6,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Board\**" />
+    <Compile Remove="Views\Contact\**" />
+    <Content Remove="Views\Board\**" />
+    <Content Remove="Views\Contact\**" />
+    <EmbeddedResource Remove="Views\Board\**" />
+    <EmbeddedResource Remove="Views\Contact\**" />
+    <None Remove="Views\Board\**" />
+    <None Remove="Views\Contact\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\BoardController.cs" />
+    <Compile Remove="Controllers\ContactsController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Board.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.5" />
